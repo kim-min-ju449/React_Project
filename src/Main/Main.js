@@ -7,9 +7,10 @@ const Main = () =>{
     return(
         <div className="BestCon">
         <div className="mainContainer" >
-        {/*<Left location="left"/>*/}
+        {/*<Left />*/}
         {/*<Right location="rigjt"/>*/}
             <NewsList/>
+
         </div>
         </div>
     )

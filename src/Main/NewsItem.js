@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {Card, CardActionArea, CardContent, CardMedia, Typography} from "@mui/material";
 import Button from "@mui/material/Button";
+import thumbnail01 from '../02_images/bigthumbnail01@3x.jpg'
 
 const NewsItemBlock = styled.div`
     display: flex;
@@ -26,68 +27,28 @@ const NewsItemBlock = styled.div`
         margin-top: 3rem;
     }
     `;
-
-const NewsItem = ({ article }) => {
-    const {title, description, url} = article;
+const NewsItem = ({ data }) => {
+    const {subject, summary, url} = data;
     return (
-        <NewsItemBlock>
+        <NewsItemBlock className="wra">
             <div className="container left">
                 {/*<NewsListBlock/>*/}
                 <p><strong>삼성전자</strong></p>
                 <div className="wra">
-                    <Card sx={{ maxWidth: 345 }}>
+                    <Card sx={{ maxWidth: 345 }} className="wra">
                         <CardActionArea>
                             <CardMedia
                                 component="img"
                                 height="140"
-                                image=""
+                                image={thumbnail01}
                                 alt="img"
                             />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
-                                    {title}
+                                    {subject}
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
-                                    {description}
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                    </Card>
-                    <Card sx={{ maxWidth: 345 }}>
-                        <CardActionArea>
-                            <CardMedia
-                                component="img"
-                                height="140"
-                                image="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA4MTlfMjYx%2FMDAxNjYwODg1NTEwOTMx.1daoRflPsCvsXK9k4GBXDp95AuhsNHjKE8SDn6ZslGIg.LlYh7zyENE7mwSQipRGmZ7hMHYhNYHGLTHXv90RAXlgg.JPEG.minis0523%2FKakaoTalk_20220817_131212793_04.jpg&type=sc960_832"
-                                alt="green iguana"
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    {title}
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    {description}
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                    </Card>
-                    <Card sx={{ maxWidth: 345 }}>
-                        <CardActionArea>
-                            <CardMedia
-                                component="img"
-                                height="140"
-                                image="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA4MTlfMjYx%2FMDAxNjYwODg1NTEwOTMx.1daoRflPsCvsXK9k4GBXDp95AuhsNHjKE8SDn6ZslGIg.LlYh7zyENE7mwSQipRGmZ7hMHYhNYHGLTHXv90RAXlgg.JPEG.minis0523%2FKakaoTalk_20220817_131212793_04.jpg&type=sc960_832"
-                                alt="green iguana"
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    {title}
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    {description}
-                                    <a href={url} target='_blank' rel='noopener noreferrer'>
-                                        {title}
-                                    </a>
+                                    {summary}
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
@@ -102,23 +63,8 @@ const NewsItem = ({ article }) => {
 
                 </div>
             </div>
-            {/*{urlToImage && (*/}
-            {/*    <div className='thumbnail'>*/}
-            {/*        <a href={url} target='_blank' rel='noopener noreferrer'>*/}
-            {/*            <img src={urlToImage} alt='thumbnail' />*/}
-            {/*        </a>*/}
-            {/*    </div>*/}
-            {/*)}*/}
-            {/*<div className='contents'>*/}
-            {/*    <h2>*/}
-            {/*        <a href={url} target='_blank' rel='noopener noreferrer'>*/}
-            {/*            {title}*/}
-            {/*        </a>*/}
-            {/*    </h2>*/}
-            {/*    <p>{description}</p>*/}
-            {/*</div>*/}
+
         </NewsItemBlock>
     );
 };
-
 export default NewsItem;
