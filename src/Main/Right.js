@@ -4,29 +4,7 @@ import {Card, CardActionArea, CardContent, CardMedia, Typography} from "@mui/mat
 import axios from "axios";
 
 const Right = () =>{
-    // const getData = () => {
-    //     axios.get("http://dev-spis.newssalad.com:8081/news/realtime",
-    //         { params:{
-    //                 "page":1,
-    //                 "size":3,
-    //                 "stockcode":"005930",
-    //
-    //             }})
-    //         .then(response =>{
-    //             if(response.data.resultCode === '200'){
-    //                 setUsers(response.data.data)
-    //                 //handleOnChange(user);
-    //             }
-    //             else{
-    //                 setUsers(response.data.data)
-    //                 //handleOnChange(user);
-    //
-    //             }
-    //         })
-    //         .catch(error =>{
-    //             console.log(error.message())
-    //         })
-    // }
+
     return(
 
         <div className="container left">

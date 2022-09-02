@@ -1,18 +1,23 @@
 import React from "react";
-import Left from "./Left";
-import Right from "./Right";
+
 import NewsList from "./NewsList";
+import NewsList2 from "./NewsList2";
+import Header from "../Header/Header";
 
-const Main = () =>{
+const Main = () => {
     return(
+        <>
+        <Header/>
         <div className="BestCon">
-        <div className="mainContainer" >
-        {/*<Left />*/}
-        {/*<Right location="rigjt"/>*/}
+        <div className="mainContainer">
+            <div>
             <NewsList/>
+            <NewsList2/>
+            </div>
+        </div>
+        </div>
 
-        </div>
-        </div>
+            </>
     )
 }
-export default Main
+export default Main;
