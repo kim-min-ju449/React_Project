@@ -1,0 +1,17 @@
+.header{
+    width:100%;
+    background-color: black;
+    display:inline-block;
+    color:white;
+}
+
+.menu {
+    list-style-type:none;
+}
+li{
+    float:left;
+    width: 10%;
+}
+a:visited{
+    color:#e63d44;
+}
