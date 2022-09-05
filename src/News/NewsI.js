@@ -4,7 +4,8 @@ import {Card, CardActionArea, CardContent, CardMedia, Typography} from "@mui/mat
 import Button from "@mui/material/Button";
 import thumbnail01 from '../02_images/bigthumbnail01@3x.jpg';
 import thumbnail02 from '../02_images/bigthumbnail02@3x.jpg';
-import './News.css';
+import '../Main/Main.css';
+
 
 const NewsItemBlock = styled.div`
     display: flex;
@@ -29,15 +30,16 @@ const NewsItemBlock = styled.div`
         margin-top: 3rem;
     }
     `;
+
 const NewsI = ({ data }) => {
     const {subject, summary, url} = data;
+
     return (
         <div className="mainContainer">
+        <div className="NewsContainer">
             <NewsItemBlock className="item" >
-
-                <div className="container left">
+                <div className="container2">
                     {/*<NewsListBlock/>*/}
-
                     <div className="wra">
                         <Card sx={{ maxWidth: 345 }} className="card">
                             <CardActionArea>
@@ -45,10 +47,9 @@ const NewsI = ({ data }) => {
                                     component="img"
                                     height="140"
                                     image={thumbnail01}
-                                    image={thumbnail02}
                                     alt="img"
-                                />
-                                <CardContent>
+                               />
+                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">
                                         {subject}
                                     </Typography>
@@ -62,6 +63,8 @@ const NewsI = ({ data }) => {
                 </div>
 
             </NewsItemBlock>
+
+        </div>
         </div>
     );
 };

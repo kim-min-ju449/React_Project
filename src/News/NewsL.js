@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import NewsI from './NewsI';
 import axios from 'axios'
 import Button from "@mui/material/Button";
-import NewsItem from "../Main/NewsItem";
-import './News.css';
+// import NewsItem from "../Main/NewsItem";
+import thumbnail01 from '../02_images/bigthumbnail01@3x.jpg';
+import Singlenews from "./Singlenews";
 
 const NewsListBlock = styled.div`
     box-sizing: border-box;
@@ -26,7 +27,7 @@ const NewsL = () =>{
     useEffect(() => {
 
         axios.get('http://dev-spis.newssalad.com:8081/news/realtime',
-            {params: {"page":1, "size":4, "stockcode":"005930",}})
+            {params: {"page":1, "size":4, "stockcode":"005930"}})
             .then(response=> setArticles(response.data.data))
             .catch(err => console.log("err"))
     }, []);
@@ -34,14 +35,18 @@ const NewsL = () =>{
         <>
             <NewsListBlock>
                 {articles && articles.map(data => (
-                    <NewsItem key={data.subject} data={data}/>
+                    <a href="/Singlenews"><NewsI key={data.subject} data={data}/></a>
+
+                ))}
+
+                {articles && articles.map(data => (
+                    <Singlenews data={data}/>
 
                 ))}
             </NewsListBlock>
             <ul>
                 <li className="menu">삼성전자</li>
                 <li className="menu">LG전자</li>
-
             </ul>
         </>
     )
