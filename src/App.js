@@ -7,6 +7,7 @@ import axios from "axios";
 import {Route, Routes, BrowserRouter} from "react-router-dom";
 import NewsList from "./Main/NewsList";
 import NewsL from "./News/NewsL";
+import Singlenews from "./News/Singlenews";
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
             {/*{window.location.pathname === "/" ? "" : <Login/>}*/}
             <Routes>
                 <Route path="/newsList" element={<NewsL/>}/>
-
+                <Route path="/singlenews" element={<Singlenews/>}/>
                 {/*<Route path="/" element={<Main/>}/>*/}
                 {/*<Route path="/news" element={<News/>}/>*/}
             </Routes>
