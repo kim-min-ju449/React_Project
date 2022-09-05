@@ -28,6 +28,7 @@ const NewsItemBlock = styled.div`
         margin-top: 3rem;
     }
     `;
+let img = {thumbnail01, thumbnail02};
 const NewsItem = ({ data }) => {
     const {subject, summary, url} = data;
     return (
@@ -43,10 +44,10 @@ const NewsItem = ({ data }) => {
                                 <CardMedia
                                     component="img"
                                     height="140"
-                                    image={thumbnail01}
-                                    image={thumbnail02}
+                                    image={img}
                                     alt="img"
                                 />
+
                                 <CardContent>
                                     <Typography gutterBottom variant="h5" component="div">
                                         {subject}

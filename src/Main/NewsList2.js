@@ -17,6 +17,9 @@ const NewsListBlock = styled.div`
     //    padding-right: 1rem;
     //}
 `;
+const OButton = () =>{
+    console.log("LG전자")
+}
 
 const NewsList = () => {
     const [articles, setArticles] = useState([]);
@@ -33,6 +36,7 @@ const NewsList = () => {
     // articles 값이 유효할 때
     return (
         <>
+            <p><strong>LG전자</strong></p>
             <NewsListBlock>
                 {articles && articles.map(data => (
                     <NewsItem key={data.subject} data={data}/>
@@ -44,9 +48,9 @@ const NewsList = () => {
             <div className="three">LG전자와 관련된 최신 뉴스가 {number}개 있습니다. <a href="/newsList/005930">리스트보기</a></div>
             <div className="HB">
                 <h3>종목명&키워드</h3>
-                <Button href="#text-buttons">LG전자</Button>
-                <Button href="#text-buttons">음식료 및 담배</Button><Button href="#text-buttons">식료품</Button>
-                <Button href="#text-buttons">키워드 4개까지 띄움</Button>
+                <Button href="#" onClick={OButton}>LG전자</Button>
+                <Button href="#">음식료 및 담배</Button><Button href="#text-buttons">식료품</Button>
+                <Button href="#">키워드 4개까지 띄움</Button>
             </div>
         </>
     );

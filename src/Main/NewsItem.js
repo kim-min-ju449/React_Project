@@ -29,7 +29,13 @@ const NewsItemBlock = styled.div`
         margin-top: 3rem;
     }
     `;
+
+
+
 const NewsItem = ({ data }) => {
+    // let imgarray = [thumbnail01, thumbnail02];
+    // return imgarray;
+
     const {subject, summary, url} = data;
     return (
         <div className="mainContainer">
@@ -45,7 +51,7 @@ const NewsItem = ({ data }) => {
                                 component="img"
                                 height="140"
                                 image={thumbnail01}
-                                image={thumbnail02}
+
                                 alt="img"
                             />
                             <CardContent>

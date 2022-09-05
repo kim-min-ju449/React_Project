@@ -1,8 +1,8 @@
 import React from "react";
-
 import NewsList from "./NewsList";
 import NewsList2 from "./NewsList2";
 import Header from "../Header/Header";
+import './Main.css';
 
 const Main = () => {
     return(

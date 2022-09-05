@@ -48,8 +48,9 @@ const NewsList = () => {
     // articles 값이 유효할 때
     return (
         <>
-        <NewsListBlock>
             <p><strong>삼성전자</strong></p>
+        <NewsListBlock>
+
             {articles && articles.map(data => (
                 <NewsItem key={data.subject} data={data}/>
 
