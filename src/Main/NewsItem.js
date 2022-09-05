@@ -4,6 +4,7 @@ import {Card, CardActionArea, CardContent, CardMedia, Typography} from "@mui/mat
 import Button from "@mui/material/Button";
 import thumbnail01 from '../02_images/bigthumbnail01@3x.jpg';
 import thumbnail02 from '../02_images/bigthumbnail02@3x.jpg';
+import './Main.css';
 
 const NewsItemBlock = styled.div`
     display: flex;
@@ -32,11 +33,11 @@ const NewsItem = ({ data }) => {
     const {subject, summary, url} = data;
     return (
         <div className="mainContainer">
-        <NewsItemBlock className="item" >
 
+        <NewsItemBlock className="item" >
             <div className="container left">
                 {/*<NewsListBlock/>*/}
-                <p><strong>삼성전자</strong></p>
+                {/*<p><strong>삼성전자</strong></p>*/}
                 <div className="wra">
                     <Card sx={{ maxWidth: 345 }} className="card">
                         <CardActionArea>

@@ -1,5 +1,5 @@
 import React from "react";
-import "./main.css";
+import "./Main.css";
 import {Card, CardActionArea, CardContent, CardMedia, Typography} from "@mui/material";
 import axios from "axios";
 

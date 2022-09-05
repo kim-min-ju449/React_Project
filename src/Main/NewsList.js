@@ -32,9 +32,9 @@ const NewsList = () => {
 
     // useEffect(() => { //5번
     //
-    //     axios.get('http://dev-spis.newssalad.com:8081/stock/relationwords',
+    //     axios.get('http://dev-spis.newssalad.com:8081/stocks/relationwords/stocks',
     //         {params: {"size":10, "stockcode":"005930",}})
-    //         .then(response=> setArticles(response.data.data))
+    //         .then(response=> setArticles(response.data.name))
     //         .catch(err => console.log("err"))
     // }, []);
 
@@ -49,6 +49,7 @@ const NewsList = () => {
     return (
         <>
         <NewsListBlock>
+            <p><strong>삼성전자</strong></p>
             {articles && articles.map(data => (
                 <NewsItem key={data.subject} data={data}/>
 
