@@ -17,8 +17,11 @@ const NewsListBlock = styled.div`
     //    padding-right: 1rem;
     //}
 `;
-const OButton = () =>{
+const AButton = () =>{
     console.log("LG전자")
+}
+const BButton = () =>{
+    console.log("음식료 및 담배")
 }
 
 const NewsList = () => {
@@ -30,6 +33,7 @@ const NewsList = () => {
         axios.get('http://dev-spis.newssalad.com:8081/news/realtime',
             {params: {"page":1, "size":3, "stockname":"LG전자",}})
             .then(response=> setArticles(response.data.data))
+
             .catch(err => console.log("err"))
     }, []);
 
@@ -41,6 +45,7 @@ const NewsList = () => {
                 {articles && articles.map(data => (
                     <NewsItem key={data.subject} data={data}/>
 
+
                 ))}
 
 
@@ -48,8 +53,10 @@ const NewsList = () => {
             <div className="three">LG전자와 관련된 최신 뉴스가 {number}개 있습니다. <a href="/newsList/005930">리스트보기</a></div>
             <div className="HB">
                 <h3>종목명&키워드</h3>
-                <Button href="#" onClick={OButton}>LG전자</Button>
-                <Button href="#">음식료 및 담배</Button><Button href="#text-buttons">식료품</Button>
+
+                <Button href="#" onClick={AButton}>LG전자</Button>
+                <Button href="#" onClick={BButton}>음식료 및 담배</Button>
+                <Button href="#text-buttons">식료품</Button>
                 <Button href="#">키워드 4개까지 띄움</Button>
             </div>
         </>

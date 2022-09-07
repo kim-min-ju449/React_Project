@@ -7,7 +7,7 @@ import './Main.css';
 const Main = () => {
     return(
         <>
-        <Header/>
+
         <div className="BestCon">
         <div className="mainContainer">
             <div>

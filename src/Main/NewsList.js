@@ -20,7 +20,8 @@ const NewsListBlock = styled.div`
 
 const NewsList = () => {
     const [articles, setArticles] = useState([]);
-    const [number, setNumber] = useState("");
+    const [number, setNumber] = useState(0);
+    const [name, setName] = useState("");
 
     useEffect(() => {
 
@@ -30,13 +31,13 @@ const NewsList = () => {
             .catch(err => console.log("err"))
     }, []);
 
-    // useEffect(() => { //5번
-    //
-    //     axios.get('http://dev-spis.newssalad.com:8081/stocks/relationwords/stocks',
-    //         {params: {"size":10, "stockcode":"005930",}})
-    //         .then(response=> setArticles(response.data.name))
-    //         .catch(err => console.log("err"))
-    // }, []);
+    useEffect(() => { //5번
+
+        axios.get('http://dev-spis.newssalad.com:8081/stocks/relationwords/stocks',
+            {params: {"size":10, "stockcode":"005930"}})
+            .then(response=> setName(response.data.name))
+            .catch(err => console.log("err"))
+    }, []);
 
     useEffect(() => { //3번
         axios.get('http://dev-spis.newssalad.com:8081/stocks/dailyreport/stocks',
@@ -59,9 +60,11 @@ const NewsList = () => {
             <div className="three">삼성전자와 관련된 최신 뉴스가 {number}개 있습니다. <a href="/newsList">리스트보기</a></div>
     <div className="HB">
         <h3>종목명&키워드</h3>
-        <Button href="#text-buttons">삼성전자</Button>
-        <Button href="#text-buttons">음식료 및 담배</Button><Button href="#text-buttons">식료품</Button>
-        <Button href="#text-buttons">키워드 4개까지 띄움</Button>
+
+        <Button href="#">{name}</Button>
+        {/*<Button href="#text-buttons">음식료 및 담배</Button>*/}
+        {/*<Button href="#text-buttons">식료품</Button>*/}
+        {/*<Button href="#text-buttons">키워드 4개까지 띄움</Button>*/}
     </div>
             </>
     );
