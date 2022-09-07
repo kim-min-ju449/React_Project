@@ -4,8 +4,6 @@ import {Card, CardActionArea, CardContent, CardMedia, Typography} from "@mui/mat
 import Button from "@mui/material/Button";
 import thumbnail01 from '../02_images/bigthumbnail01@3x.jpg';
 import thumbnail02 from '../02_images/bigthumbnail02@3x.jpg';
-import '../Main/Main.css';
-
 
 const NewsItemBlock = styled.div`
     display: flex;
@@ -37,7 +35,7 @@ const NewsI = ({ data }) => {
     return (
         <div className="mainContainer">
         <div className="NewsContainer">
-            <NewsItemBlock className="item" >
+            <NewsItemBlock className="item2" >
                 <div className="container2">
                     {/*<NewsListBlock/>*/}
                     <div className="wra">

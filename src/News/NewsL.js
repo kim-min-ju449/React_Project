@@ -12,7 +12,6 @@ const NewsListBlock = styled.div`
     box-sizing: border-box;
     padding-bottom: 3rem;
     width: 768px;
-    margin: 0 auto;
     margin-top: 2rem;
     display: flex;
     //@media screen and (max-width: 768px){
@@ -34,18 +33,17 @@ const NewsL = () =>{
     }, []);
     return(
         <>
-            <NewsListBlock>
-                {articles && articles.map(data => (
-                    <a href="/Singlenews"><NewsI key={data.subject} data={data}/></a>
-
-                ))}
-
-
-            </NewsListBlock>
             <ul>
                 <li className="menu">삼성전자</li>
                 <li className="menu">LG전자</li>
             </ul>
+            <NewsListBlock>
+                {articles && articles.map(data => (
+                    <a href="/Singlenews"><NewsItem key={data.subject} data={data}/></a>
+                ))}
+
+            </NewsListBlock>
+
         </>
     )
 }

@@ -1,14 +1,13 @@
 import React, {useEffect, useState} from "react";
 import ListI from "./NewsI";
 import ListL from "./NewsL";
-import '../Main/Main.css';
-import axios from "axios";
 
+import axios from "axios";
 
 const Singlenews = ({data}) =>{
     const [url, setUrl] = useState([]);
     const {subject, summary} = data;
-    console.log(data)
+    console.log(data, '---')
     // useEffect(() => { //5
     //
     //     axios.get('http://dev-spis.newssalad.com:8081/news/similar',
