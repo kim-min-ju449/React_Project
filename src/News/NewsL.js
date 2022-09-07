@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 // import NewsItem from "../Main/NewsItem";
 import thumbnail01 from '../02_images/bigthumbnail01@3x.jpg';
 import Singlenews from "./Singlenews";
+import NewsItem from "../Main/NewsItem";
 
 const NewsListBlock = styled.div`
     box-sizing: border-box;
@@ -39,10 +40,7 @@ const NewsL = () =>{
 
                 ))}
 
-                {articles && articles.map(data => (
-                    <Singlenews data={data}/>
 
-                ))}
             </NewsListBlock>
             <ul>
                 <li className="menu">삼성전자</li>
